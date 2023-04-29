@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="UrunlerSet" EntityType="Model1.Urunler" />
+    <EntitySet Name="FiyatlarSet" EntityType="Model1.Fiyatlar" />
+    <EntitySet Name="RezervasyonSet" EntityType="Model1.Rezervasyon" />
+    <EntitySet Name="KullanicilarSet" EntityType="Model1.Kullanicilar" />
+  </EntityContainer>
+  <EntityType Name="Urunler">
+    <Key>
+      <PropertyRef Name="UrunNo" />
+    </Key>
+    <Property Name="UrunNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Yemekler" Type="String" Nullable="false" />
+    <Property Name="Icecekler" Type="String" Nullable="false" />
+    <Property Name="Tatlilar" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Fiyatlar">
+    <Key>
+      <PropertyRef Name="FiyatNo" />
+    </Key>
+    <Property Name="FiyatNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="YFiyat" Type="Int32" Nullable="false" />
+    <Property Name="IFiyat" Type="Int32" Nullable="false" />
+    <Property Name="TFiyat" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Rezervasyon">
+    <Key>
+      <PropertyRef Name="RezervasyonNo" />
+    </Key>
+    <Property Name="RezervasyonNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tarih" Type="String" Nullable="false" />
+    <Property Name="Saat" Type="String" Nullable="false" />
+    <Property Name="Kisi" Type="String" Nullable="false" />
+    <Property Name="Yer" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Kullanicilar">
+    <Key>
+      <PropertyRef Name="KullaniciNo" />
+    </Key>
+    <Property Name="KullaniciNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KullaniciAdi" Type="String" Nullable="false" />
+    <Property Name="Sifre" Type="String" Nullable="false" />
+  </EntityType>
+</Schema>

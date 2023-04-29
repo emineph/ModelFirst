@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container">
+    <EntitySetMapping Name="UrunlerSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Urunler)">
+        <MappingFragment StoreEntitySet="UrunlerSet">
+          <ScalarProperty Name="UrunNo" ColumnName="UrunNo" />
+          <ScalarProperty Name="Yemekler" ColumnName="Yemekler" />
+          <ScalarProperty Name="Icecekler" ColumnName="Icecekler" />
+          <ScalarProperty Name="Tatlilar" ColumnName="Tatlilar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FiyatlarSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Fiyatlar)">
+        <MappingFragment StoreEntitySet="FiyatlarSet">
+          <ScalarProperty Name="FiyatNo" ColumnName="FiyatNo" />
+          <ScalarProperty Name="YFiyat" ColumnName="YFiyat" />
+          <ScalarProperty Name="IFiyat" ColumnName="IFiyat" />
+          <ScalarProperty Name="TFiyat" ColumnName="TFiyat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RezervasyonSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Rezervasyon)">
+        <MappingFragment StoreEntitySet="RezervasyonSet">
+          <ScalarProperty Name="RezervasyonNo" ColumnName="RezervasyonNo" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="Saat" ColumnName="Saat" />
+          <ScalarProperty Name="Kisi" ColumnName="Kisi" />
+          <ScalarProperty Name="Yer" ColumnName="Yer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KullanicilarSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Kullanicilar)">
+        <MappingFragment StoreEntitySet="KullanicilarSet">
+          <ScalarProperty Name="KullaniciNo" ColumnName="KullaniciNo" />
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
